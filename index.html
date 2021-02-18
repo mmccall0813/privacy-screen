@@ -12,13 +12,14 @@ z-index:99999;
 }
 </style>
 <script src="html2canvas.js"></script>
-<script>
-function captureScreen(){
-html2canvas(document.body).then(function(canvas) {
- document.body.appendChild(canvas);
-});
-}
- </script>
-<button onclick="captureScreen()">Capture</button>
-<span id="privacyscreen"></span>
+<input type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();'><br/>
+
+  <!-- Script -->
+  <script type='text/javascript'>
+  function screenshot(){
+    html2canvas(document.body).then(function(canvas) {
+    document.body.appendChild(canvas);
+   });
+  }
+  </script><span id="privacyscreen"></span>
 </html>
