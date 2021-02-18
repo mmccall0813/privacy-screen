@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<style>
+#privacyscreen {
+filter: opacity(0%);
+pointer-events: none;
+background-color:black;
+margin:0px;
+width:100%;
+height:100%;
+z-index:99999;
+}
+</style>
+<script src="html2canvas.js"></script>
+<script>
+function captureScreen(){
+html2canvas(document.body).then(function(canvas) {
+ document.body.appendChild(canvas);
+});
+}
+<button onclick="captureScreen()">Capture</button>
+<span id="privacyscreen"></span>
+</html>
