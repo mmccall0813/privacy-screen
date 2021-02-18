@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
+<div id="screen"></div>
 <style>
-#privacyscreen {
-filter: opacity(50%);
-pointer-events: none;
+#screen {
+filter: opacity(0%);
 background-color: black;
+position: absolute;
 margin:0px;
 width:100%;
 height:100%;
 z-index:99999;
+pointer-events: none;
+overflow-y: hidden;
+overflow-x: hidden;
+top: 0; left: 0;
 }
 </style>
-<div id="privacyscreen"></div>
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <input type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();'><br/>
 
