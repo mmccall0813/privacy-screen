@@ -23,8 +23,6 @@ top: 0; left: 0;
   <script type='text/javascript'>
   function screenshot(){
     html2canvas(document.body).then(function(canvas) {
-      canvas.height="720px";
-      canvas.length="1280px"
     document.body.appendChild(canvas);
    });
   }
